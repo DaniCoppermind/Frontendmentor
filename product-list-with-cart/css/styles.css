@@ -20,63 +20,72 @@ body {
   background-color: var(--Rose-100);
   color: var(--Rose-900);
 
-
   display: flex;
   align-items: flex-start;
-
-  margin: 3rem 0 0 5rem;
+  justify-content: center;
+  margin: 3rem .5rem;
 }
 
 li {
   list-style: none;
 }
 
-#cart-products {
-  h1 {
-    font-weight: 900;
-    font-size: 28px;
-    margin-bottom: 2rem;
-  }
+h1 {
+  font-weight: 900;
+  font-size: 28px;
+  margin-bottom: 1.5rem;
 }
 
 .cart-items-product {
   display: grid;
   grid-template-columns: repeat(3, minmax(250px, 1fr));
   gap: 1rem;
-}
 
-.cart-item {
-  position: relative;
-  width: 100%;
-
-  .cart-item-image {
-    width: 17rem;
-    height: auto;
-    border-radius: 12px;
+  & .cart-item {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: .5rem;
   }
 
-  .cart-item-button {
+  & .cart-item-image {
+    width: 18rem;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    mask-image: linear-gradient(to bottom, black 10%, rgba(0, 0, 0, 0.7) 90%);
+  }
+
+  & .cart-item-button {
     position: absolute;
-    left: 3.5rem;
-    top: 14.8rem;
+    bottom: 85px;
+    left: 50%;
+    transform: translateX(-60%);
+  }
 
-    .add-to-cart-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      width: 9.5rem;
-      border-radius: 2.5rem;
-      height: 2.5rem;
-      border: none;
-      box-shadow: 0 0 0 1.5px rgba(0, 0, 0, .3);
-      font-weight: 600;
+  & .cart-item-details {
+    margin-top: 30px;
+  }
+}
 
-      &:hover {
-        border-color: var(--Red);
-        color: var(--Red);
-        cursor: pointer;
-      }
-    }
+.add-to-cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 9.5rem;
+  border-radius: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  box-shadow: 0 0 0 1.5px rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border: 1px solid var(--Red);
+    color: var(--Red);
+    cursor: pointer;
   }
 }
