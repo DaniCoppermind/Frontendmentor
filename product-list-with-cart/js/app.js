@@ -19,12 +19,12 @@ const renderProducts = (data) => {
   data.map((product) => {
     productCard.innerHTML += `
     <li class="cart-item">
-      <img src="${product.image.desktop}" alt="${
-      product.name
-    }" class="cart-item-image">  
-      <button>
-        <img class="add-to-cart-btn" src="assets/images/icon-add-to-cart.svg"/> Add to Cart
+      <img src="${product.image.desktop}" alt="${product.name}" class="cart-item-image">  
+      <div class="cart-item-button"> 
+      <button class="add-to-cart-btn">
+        <img src="assets/images/icon-add-to-cart.svg"/> Add to Cart
       </button>
+      </div>
       <div class="cart-item-details">
         <span class="cart-item-category">${product.category}</span>
         <h2 class="cart-item-title">${product.name}</h2>
