@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/styles.css">
-  <link rel="stylesheet" href="./css/font.css">
-  <script type="module" src="./js/app.js"></script>
-  <title>Document</title>
-</head>
-<body>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/font.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <script type="module" src="./js/app.js"></script>
+    <title>Desserts List - Cart</title>
+  </head>
+  <body>
+    <section id="cart-products" aria-labelledby="cart-desserts">
+      <h1>Desserts</h1>
+      <ul class="cart-items-product">
+        <!--  -->
+      </ul>
+    </section>
+
+    <section id="cart-summary">
+      <h2>Your Cart</h2>
+      <ul class="cart-items-list">
+        <!-- cart details -->
+      </ul>
+      <div class="class-order-total">
+        <label for="total-price">Order Total</label>
+        <span id="total-price">$0.00</span>
+      </div>
+      <div class="delivery-advice">
+        <img
+          src="/assets/images/icon-carbon-neutral.svg"
+          alt="Carbon-neutral Delivery"
+        />
+        <p>This is a <strong>carbon-neutral</strong> delivery</p>
+      </div>
+      <button id="confirm-button">Confirm Order</button>
+    </section>
+  </body>
 </html>
