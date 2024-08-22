@@ -19,7 +19,9 @@ body {
   font-family: 'Red Hat Text', sans-serif;
   background-color: var(--Rose-100);
   color: var(--Rose-900);
+}
 
+main {
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -68,7 +70,7 @@ h1 {
     position: absolute;
     bottom: 75px;
     left: 50%;
-    transform: translateX(-60%);
+    transform: translateX(-50%);
   }
 
   & .cart-item-details {
@@ -93,6 +95,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: white;
   gap: 8px;
   width: 9.5rem;
   border-radius: 2.5rem;
@@ -104,14 +107,43 @@ h1 {
 
   &:hover {
     border: 1px solid var(--Red);
-    color: var(--Red);
     cursor: pointer;
   }
+
+  & .decrement-quantity {
+    border: 1px solid white;
+    background: transparent;
+    border-radius: 50%;
+    padding: 0 2px;
+    cursor: pointer;
+
+    & img {
+      margin-bottom: 3px;
+    }
+  }
+
+  & .increment-quantity {
+    border: 1px solid white;
+    background: transparent;
+    border-radius: 50%;
+    padding: 0 2px;
+    cursor: pointer;
+  }
+}
+
+.management-button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--Red);
+  color: white;
 }
 
 /* cart-summary */
 
 #cart-summary {
+  position: sticky;
+  top: 1rem;
   background: var(--Rose-50);
   padding: 1rem;
   border-radius: 12px;
@@ -205,4 +237,62 @@ h1 {
   &:hover {
     color: var(--Rose-100);
   }
+}
+
+/* modal */
+
+/* Modal Container */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Button Styles */
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+button#cancelBtn {
+  background-color: #f44336; /* Red */
 }

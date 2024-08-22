@@ -14,70 +14,42 @@
     <title>Desserts List - Cart</title>
   </head>
   <body>
-    <section id="cart-products" aria-labelledby="cart-desserts">
-      <h1>Desserts</h1>
-      <ul class="cart-items-product">
-        <!--  -->
-      </ul>
-    </section>
+    <main id="container">
+      <section id="cart-products" aria-labelledby="cart-desserts">
+        <h1>Desserts</h1>
+        <ul class="cart-items-product">
+          <!--  -->
+        </ul>
+      </section>
 
-    <section id="cart-summary">
-      <h2>Your Cart <span class="cart-quantity">(7)</span></h2>
-      <ul class="cart-items-list">
-        <!-- cart details -->
-        <article class="cart-item-add">
-          <div class="item-details">
-            <p class="item-title">Classic Tiramisu</p>
-            <p class="cart-item-cost">
-              <span class="item-quantity">1x</span>
-              <span class="item-price">$5.50</span>
-              <span class="item-total">$5.50</span>
-            </p>
-          </div>
-          <button class="remove-item">
-            <img src="assets/images/icon-remove-item.svg" />
-          </button>
-        </article>
+      <section id="cart-summary">
+        <h2>Your Cart <span class="cart-quantity"></span></h2>
+        <ul class="cart-items-list">
+          <!-- cart details -->
+        </ul>
+        <div class="class-order-total">
+          <label for="total-price">Order Total</label>
+          <span id="total-price">$0.00</span>
+        </div>
+        <div class="delivery-advice">
+          <img
+            src="/assets/images/icon-carbon-neutral.svg"
+            alt="Carbon-neutral Delivery"
+          />
+          <p>This is a <strong>carbon-neutral</strong> delivery</p>
+        </div>
+        <button id="confirm-button">Confirm Order</button>
+      </section>
+    </main>
 
-        <article class="cart-item-add">
-          <div class="item-details">
-            <p class="item-title">Classic Tiramisu</p>
-            <p class="cart-item-cost">
-              <span class="item-quantity">1x</span>
-              <span class="item-price">$5.50</span>
-              <span class="item-total">$5.50</span>
-            </p>
-          </div>
-          <button class="remove-item">
-            <img src="assets/images/icon-remove-item.svg" />
-          </button>
-        </article>
-        <article class="cart-item-add">
-          <div class="item-details">
-            <p class="item-title">Classic Tiramisu</p>
-            <p class="cart-item-cost">
-              <span class="item-quantity">1x</span>
-              <span class="item-price">$5.50</span>
-              <span class="item-total">$5.50</span>
-            </p>
-          </div>
-          <button class="remove-item">
-            <img src="assets/images/icon-remove-item.svg" />
-          </button>
-        </article>
-      </ul>
-      <div class="class-order-total">
-        <label for="total-price">Order Total</label>
-        <span id="total-price">$0.00</span>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Modal Title</h2>
+        <p>This is a sample modal. You can place any content here.</p>
+        <button id="confirmBtn">Confirm</button>
+        <button id="cancelBtn">Cancel</button>
       </div>
-      <div class="delivery-advice">
-        <img
-          src="/assets/images/icon-carbon-neutral.svg"
-          alt="Carbon-neutral Delivery"
-        />
-        <p>This is a <strong>carbon-neutral</strong> delivery</p>
-      </div>
-      <button id="confirm-button">Confirm Order</button>
-    </section>
+    </div>
   </body>
 </html>
