@@ -26,8 +26,8 @@ const renderProducts = (data) => {
       </button>
       </div>
       <div class="cart-item-details">
-        <span class="cart-item-category">${product.category}</span>
-        <h2 class="cart-item-title">${product.name}</h2>
+        <span>${product.category}</span>
+        <h2>${product.name}</h2>
         <p class="cart-item-price">$${product.price.toFixed(2)}</p>
       </div>
     </li>
